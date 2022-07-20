@@ -1,0 +1,22 @@
+Process  : 1
+Concepts : Assembler, BIOS
+Goal     : Create a file which the BIOS interprests as a bootable disk
+
+>== Threory ==<
+
+=> When the computer boots, the BIOS doesn't know how to load the OS, so it deleggates that task to the boot sector.
+=> Thus boot sector must be placed in a known, stadard location.
+=> That location would be first sector of the disk and occupies 512 bytes.
+
+=> To make sure that the "disk is bootable", the BIOS checks that bytes 511 and 512 of the alleged boot sector are bytes 0xAA55
+
+Simplest boot Sector :
+
+    e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    [  29 more lines with sixteen zero-bytes each ]
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 aa
+
+*** x86 is little endian, ending with 16-bit value 0xAA55, first three bytes perform an infinte jump
+
+=> Performs Infinte loop! and also displayinhg Booting from Hard Disk!!
