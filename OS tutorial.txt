@@ -33,3 +33,16 @@ Goal     : Make our previously silent boot sector print some text
 => To store each character into the register 'al', i.e. lower part of 'ax'
 => To store 0x0e into 'ah', i.e. higher part of 'ax', which tells the video interrupt that the actual function we want to run is to 'write the contents of al in tty mode'
 => 0x10 which raises genereal interrupt for video services.
+
+Process  : 3
+Concepts : Memory offsets, pointers 
+Goal     : Learn how th ecomputer memory organized
+
+>== Theory ==<
+
+=> Refer Figure 3.1 => Memory Layout
+=> Well, BIOS places the boor sector at 0x7C00
+=> To figure it out, will try 4 strategies
+
+=> After running the program,
+    first attempt is that it tries to load the immediate offset into 'al' as the character to print
