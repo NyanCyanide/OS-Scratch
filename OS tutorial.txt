@@ -36,7 +36,7 @@ Goal     : Make our previously silent boot sector print some text
 
 Process  : 3
 Concepts : Memory offsets, pointers 
-Goal     : Learn how th ecomputer memory organized
+Goal     : Learn how the computer memory organized
 
 >== Theory ==<
 
@@ -46,3 +46,11 @@ Goal     : Learn how th ecomputer memory organized
 
 => After running the program,
     first attempt is that it tries to load the immediate offset into 'al' as the character to print
+
+Process  : 4
+Concepts : Stack
+Goal     : Learn how to user the Stack
+
+>== Theory ==<
+
+=> 'bp' register stores the base address (bottom) of the stack, and 'sp' stores the top, and that the stack grows downwards from bp (i.e sp gets decremented)
