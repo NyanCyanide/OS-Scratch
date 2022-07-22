@@ -56,3 +56,14 @@ Goal     : Learn how to use the Stack
 => 'bp' register stores the base address (bottom) of the stack, and 'sp' stores the top, and that the stack grows downwards from bp (i.e sp gets decremented)
 => Implementation of Stack
 => PUSH and POP operations
+
+Process  : 5
+Concepts : Control Structures, Function Calling, Strings
+Goal     : Learn how to code basic stuff (loops, fucntions) with assembler
+
+>== Theory ==<
+
+=> All strings should end with null byte or (0x00) to signify its the end
+=> The text or the string is converted to ASCII by the assembler
+=> psuha instruction pushes all the contents in the registers to stack
+=> popa instruction pops all the contents from the stack to the registers

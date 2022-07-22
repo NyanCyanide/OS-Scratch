@@ -5,7 +5,7 @@ ECHO.
 :start
 
 IF EXIST "%1.asm" (
-    nasm -fbin %1.asm -o %1.bin
+    nasm -fbin "%1.asm" -o "%1.bin"
     ECHO Compiled Successfully!
 ) ELSE (
     ECHO File %1.asm not found!
